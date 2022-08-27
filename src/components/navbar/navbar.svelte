@@ -99,8 +99,6 @@
         display: block;
         padding: 10px 10px 0 10px;
         text-align: center;
-        align-items: center;
-        justify-content: space-evenly;
     }
 
     .active {

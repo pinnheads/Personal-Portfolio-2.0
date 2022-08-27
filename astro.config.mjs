@@ -11,4 +11,8 @@ export default defineConfig({
   integrations: [svelte(), tailwind()],
   output: 'server',
   adapter: netlify(),
+  server: {
+    port: 3000,
+    host: true
+  }
 });
