@@ -1,0 +1,56 @@
+---
+import { github, twitter, email, linkedin } from "../icons/iconData";
+
+const fillColor = "#666666";
+---
+
+<div
+    class="flex sm:flex-row lg:flex-col-reverse gap-12 lg:gap-12 md:gap-24 my-12"
+>
+    <a href="/contact" class="basis-1/4">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10"
+            viewBox="0 0 24 24"
+        >
+            <path d={email} fill={fillColor}></path>
+        </svg>
+    </a>
+    <a href="https://twitter.com/utsavdeep01" class="basis-1/4" target="_blank">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10"
+            viewBox="0 0 24 24"
+        >
+            <path d={twitter} fill={fillColor}></path>
+        </svg>
+    </a>
+    <a
+        href="https://linkedin.com/in/utsavdeep"
+        class="basis-1/4"
+        target="_blank"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10"
+            viewBox="0 0 24 24"
+        >
+            <path d={linkedin} fill={fillColor}></path>
+        </svg>
+    </a>
+    <a href="https://github.com/pinnheads" class="basis-1/4" target="_blank">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10"
+            viewBox="0 0 24 24"
+        >
+            <path d={github} fill={fillColor}></path>
+        </svg>
+    </a>
+</div>
+
+<style>
+    svg:hover {
+        fill: #dbe0e6;
+    }
+</style>

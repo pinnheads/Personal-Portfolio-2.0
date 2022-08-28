@@ -1,65 +1,54 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Socials from "../components/socials/socials.astro";
+import { about } from "../data/personalData";
 ---
 
-<Layout title="About" />
+<Layout title="About">
+	<div
+		class="container mx-auto gap-0 h-full grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto align-middle"
+	>
+		<div
+			class="grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto justify-items-center align-middle md:w-full"
+		>
+			<div class="m-auto align-middle">
+				<img
+					src="assets/profile-circle.png"
+					alt="Profile Photo"
+					class="w-44 md:w-60 lg:w-80 shadow-lg shadow-slate-800 hover:shadow-xl hover:shadow-slate-600 hover:scale-110 transition ease-in-out m-4 rounded-full delay-50"
+				/>
+			</div>
+			<Socials />
+		</div>
+		<div class="m-auto text-center">
+			<h2 class="text-4xl md:text-6xl lg:text-7xl">Hi 👋, I'm</h2>
+			<h1 class="text-5xl md:text-8xl lg:text-9xl name">{about.name}</h1>
+			<span class="text-2xl md:text-5xl lg:text-5xl"
+				>a {about.employed_as}
+			</span>
+			<div class="flex w-full flex-column mt-12">
+				<button
+					type="button"
+					class="text-black text-center mx-4 rounded-xl md:text-2xl p-4 hover:bg-yellow-600 bg-yellow-400 basis-1/2"
+					>Resume</button
+				>
+				<button
+					type="button"
+					class="text-blue-400 text-center mx-4 md:text-2xl rounded-xl hover:bg-blue-800 tranisition ease-in-out delay-75 border border-blue-500 p-4 basis-1/2"
+				>
+					<a href="/contact"> Contact Me</a>
+				</button>
+			</div>
+		</div>
+	</div>
+</Layout>
 
 <style>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}
 
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.name {
+		color: #00e0b0;
 	}
 </style>
