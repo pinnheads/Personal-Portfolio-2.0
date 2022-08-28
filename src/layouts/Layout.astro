@@ -15,6 +15,24 @@ const { title } = Astro.props as Props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -73,7 +91,11 @@ const { title } = Astro.props as Props;
 			/* Smartphones (portrait and landscape) ----------- */
 			@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 				.main-body {
-					height: 75vh;
+					height: 76vh;
+				}
+
+				.wrapper {
+					margin-top: 20px;
 				}
 			}
 		</style>
