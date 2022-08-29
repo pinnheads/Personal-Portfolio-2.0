@@ -10,6 +10,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
+        color: #555;
         text-align: center;
         margin-bottom: 10px;
         margin-top: 10px;
