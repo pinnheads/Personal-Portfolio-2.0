@@ -26,15 +26,15 @@ import { about } from "../data/personalData";
 			<span class="text-2xl md:text-5xl lg:text-5xl"
 				>a {about.employed_as}
 			</span>
-			<div class="flex w-full flex-column mt-12">
+			<div class="flex w-full flex-column my-7 md:mt-12">
 				<button
 					type="button"
-					class="text-black text-center mx-4 rounded-xl md:text-2xl p-4 hover:bg-yellow-600 bg-yellow-400 basis-1/2"
+					class="text-black text-center mx-4 sm:text-lg rounded-xl md:text-2xl p-2 md:p-4 hover:bg-yellow-600 bg-yellow-400 basis-1/2"
 					>Resume</button
 				>
 				<button
 					type="button"
-					class="text-blue-400 text-center mx-4 md:text-2xl rounded-xl hover:bg-blue-800 tranisition ease-in-out delay-75 border border-blue-500 p-4 basis-1/2"
+					class="text-blue-400 text-center mx-4 sm:text-lg md:text-2xl rounded-xl hover:bg-blue-800 tranisition ease-in-out delay-75 border border-blue-500 p-2 md:p-4 basis-1/2"
 				>
 					<a href="/contact"> Contact Me</a>
 				</button>
@@ -43,9 +43,12 @@ import { about } from "../data/personalData";
 	</div>
 </Layout>
 
-<style>
+<style is:global>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+	* {
+		/* border: 1px limegreen solid; */
 	}
 
 	.name {
