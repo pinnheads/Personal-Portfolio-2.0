@@ -5,7 +5,7 @@ import Card from "../components/Project/Card.astro";
 
 import { about, response } from "../data/personalData";
 
-const basics = response.projects;
+const projects = response.projects;
 const properties = {
     title: "Projects",
     color: "#f8ca12",
@@ -14,15 +14,19 @@ const properties = {
 
 <Layout title={properties.title}>
     <RotatingCard title={properties.title} color={properties.color}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <span class="my-8">
+            {
+                projects.map((project) => (
+                    <Card
+                        projectTitle={project.name}
+                        summary={project.summary}
+                        githubUrl={project.githubUrl}
+                        languages={project.languages}
+                        url={project.url}
+                    />
+                ))
+            }
+        </span>
     </RotatingCard>
 </Layout>
 
