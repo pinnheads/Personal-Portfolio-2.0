@@ -1,60 +1,58 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Socials from "../components/socials/socials.astro";
-import { about } from "../data/personalData";
+import Layout from '../layouts/Layout.astro';
+import Socials from '../components/socials/socials.astro';
+const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
+const response = await fetch(gitConnectedUrl)
+    .then((data) => data.json())
+    .catch((error) => console.log(error));
+
+const basics = await response.basics;
 ---
 
-<Layout title="About">
-	<div
-		class="container mx-auto gap-0 h-full grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto align-middle"
-	>
-		<div
-			class="grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto justify-items-center align-middle md:w-full"
-		>
-			<div class="m-auto align-middle">
-				<img
-					src="assets/profile-circle.png"
-					alt="Profile Photo"
-					class="w-44 md:w-60 lg:w-72 3xl:w-80 shadow-lg shadow-slate-800 hover:shadow-xl hover:shadow-slate-600 hover:scale-110 transition ease-in-out m-4 rounded-full delay-50"
-				/>
-			</div>
-			<Socials />
-		</div>
-		<div class="m-auto text-center">
-			<h2 class="text-4xl md:text-6xl 3xl:text-7xl">Hi 👋, I'm</h2>
-			<h1 class="text-5xl md:text-8xl 3xl:text-9xl name">{about.name}</h1>
-			<span class="text-2xl md:text-5xl 3xl:text-5xl"
-				>a {about.employed_as}
-			</span>
-			<div class="flex w-full flex-column my-7 md:mt-12">
-				<a
-					rel="prefetch"
-					type="button"
-					href="https://registry.jsonresume.org/pinnheads"
-					class="text-black text-center mx-4 sm:text-lg rounded-xl md:text-2xl p-2 md:p-4 hover:bg-yellow-500 bg-[#f8ca12] basis-1/2 font-bold"
-				>
-					Resume
-				</a>
-				<a
-					type="button"
-					class="basis-1/2 text-blue-400 text-center mx-4 sm:text-lg md:text-2xl rounded-xl hover:bg-[#10acc7] hover:text-white tranisition ease-in-out delay-75 border border-blue-500 p-2 md:p-4 font-bold md:font-medium hover:font-bold"
-					href="/contact"
-				>
-					Contact Me
-				</a>
-			</div>
-		</div>
-	</div>
+<Layout title='About'>
+    <div class='container mx-auto gap-0 h-full grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto align-middle'>
+        <div class='grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto justify-items-center align-middle md:w-full'>
+            <div class='m-auto align-middle'>
+                <img
+                    src='assets/profile-circle.png'
+                    alt='Profile Photo'
+                    class='w-44 md:w-60 lg:w-72 3xl:w-80 shadow-lg shadow-slate-800 hover:shadow-xl hover:shadow-slate-600 hover:scale-110 transition ease-in-out m-4 rounded-full delay-50'
+                />
+            </div>
+            <Socials />
+        </div>
+        <div class='m-auto text-center w-full'>
+            <h2 class='text-4xl md:text-6xl 3xl:text-7xl'>Hi 👋, I'm</h2>
+            <h1 class='text-5xl md:text-8xl 3xl:text-9xl name'>
+                {basics.name}
+            </h1>
+            <span class='text-2xl md:text-5xl 3xl:text-5xl'>a {basics.label}</span>
+            <div class='flex flex-column my-7 md:mt-12'>
+                <a
+                    rel='prefetch'
+                    type='button'
+                    href='https://registry.jsonresume.org/pinnheads'
+                    class='text-black text-center mx-4 text-lg rounded-xl md:text-2xl p-2 md:p-4 hover:bg-yellow-500 bg-[#f8ca12] basis-1/2 font-bold ml-4'
+                >
+                    Resume
+                </a>
+                <a
+                    type='button'
+                    class='basis-1/2 text-blue-400 text-center text-lg md:text-2xl rounded-xl hover:bg-[#10acc7] hover:text-white tranisition ease-in-out delay-75 border border-blue-500 md:p-4 font-bold md:font-medium hover:font-bold pt-2 mr-4'
+                    href='/contact'
+                >
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 <style is:global>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-	* {
-		/* background-color: rgba(188, 247, 121, 0.2); */
-	}
-	.name {
-		color: #00e0b0;
-	}
+    * {
+        /* background-color: rgba(188, 247, 121, 0.2); */
+    }
+    .name {
+        color: #00e0b0;
+    }
 </style>

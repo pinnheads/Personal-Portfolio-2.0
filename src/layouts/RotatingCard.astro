@@ -1,0 +1,57 @@
+---
+import { text } from "svelte/internal";
+
+export interface Props {
+    title: string;
+    color: string;
+}
+
+const { title, color } = Astro.props as Props;
+const textColor = color;
+---
+
+<div
+    class="flex flex-column flex-wrap md:flex-row w-full md:h-full overflow-hidden"
+>
+    <div
+        class="border-r-2 md:ml-4 xl:pr-3 h-full rounded-lg text-4xl text-bold 3xl:text-6xl textbox uppercase justify-center items-center sm:fixed md:sticky z-20"
+    >
+        {title}
+    </div>
+    <div
+        class="flex-grow flex flex-col basis-11/12 overflow-y-scroll no-scrollbar h-full z-10"
+    >
+        <slot />
+    </div>
+</div>
+
+<style define:vars={{ textColor }}>
+    .textbox {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        color: var(--textColor);
+        border-right: 2px solid;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .textbox {
+            writing-mode: horizontal-tb;
+            border-right: 0;
+            text-align: center;
+            border-bottom: 2px solid;
+            padding: 0.8rem 0;
+            letter-spacing: 0.8rem;
+            width: 100%;
+        }
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+</style>
