@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Socials from '../components/socials/socials.astro';
-import { about, response } from '../data/personalData';
+const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
+const response = await fetch(gitConnectedUrl)
+    .then((data) => data.json())
+    .catch((error) => console.log(error));
 
 const basics = await response.basics;
 ---
