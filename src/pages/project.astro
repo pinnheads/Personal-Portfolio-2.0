@@ -1,20 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import RotatingCard from "../layouts/RotatingCard.astro";
-import Card from "../components/Project/Card.astro";
+import Layout from '../layouts/Layout.astro';
+import RotatingCard from '../layouts/RotatingCard.astro';
+import Card from '../components/Project/Card.astro';
 
-import { about, response } from "../data/personalData";
+import { response } from '../data/personalData';
 
-const projects = response.projects;
+const projects = await response.projects;
 const properties = {
-    title: "Projects",
-    color: "#f8ca12",
+    title: 'Projects',
+    color: '#f8ca12',
 };
 ---
 
 <Layout title={properties.title}>
     <RotatingCard title={properties.title} color={properties.color}>
-        <span class="my-8">
+        <span class='my-8'>
             {
                 projects.map((project) => (
                     <Card
