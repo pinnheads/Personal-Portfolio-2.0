@@ -1,90 +1,76 @@
 ---
-import Navbar from "../components/navbar/navbar.svelte";
-import Footer from "../components/footer/footer.svelte";
-import "@fontsource/open-sans";
-import "@fontsource/league-spartan";
+import Navbar from '../components/navbar/navbar.svelte';
+import Footer from '../components/footer/footer.svelte';
+import '@fontsource/open-sans';
+import '@fontsource/league-spartan';
 
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<section class="z-20">
-		<Navbar client:load />
-	</section>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width' />
+        <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='generator' content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <section class='z-20'>
+        <Navbar client:load />
+    </section>
 
-	<div
-		class="flex justify-items-center align-middle text-center w-100 mt-6 h-[75vh] md:h-[77vh] 2xl:h-[81vh] 3xl:h-[85vh] rounded-3xl mx-2 wrapper z-10"
-		style="background-color: #111418;"
-	>
-		<div class="h-full w-full">
-			<slot />
-		</div>
-	</div>
-	<Footer client:idle />
-	<style is:global>
-		:root {
-			--color-bg: #e7eaee;
-			--color-border: hsl(17, 24%, 90%);
-		}
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: "League Spartan", sans-serif;
-		}
+    <div
+        class='flex justify-items-center align-middle text-center w-100 mt-6 h-[75vh] md:h-[77vh] 2xl:h-[81vh] 3xl:h-[85vh] rounded-3xl mx-2 wrapper z-10'
+        style='background-color: #111418;'
+    >
+        <div class='h-full w-full'>
+            <slot />
+        </div>
+    </div>
+    <Footer client:idle />
+    <style is:global>
+        :root {
+            --color-bg: #e7eaee;
+            --color-border: hsl(17, 24%, 90%);
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'League Spartan', sans-serif;
+        }
 
-		html {
-			font-family: "Open Sans", sans-serif;
-			color: #cad2c5;
-			background-color: var(--color-bg);
-			overflow: hidden;
-		}
-		body {
-			margin: 0;
-		}
+        html {
+            font-family: 'Open Sans', sans-serif;
+            color: #cad2c5;
+            background-color: var(--color-bg);
+            overflow: hidden;
+        }
+        body {
+            margin: 0;
+        }
 
-		.wrapper {
-			overflow: overlay;
-		}
+        .wrapper {
+            overflow: auto;
+        }
 
-		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-			.wrapper {
-				height: 83vh;
-			}
-		}
-	</style>
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            .wrapper {
+                height: 83vh;
+            }
+        }
+    </style>
 
 
 </html>
