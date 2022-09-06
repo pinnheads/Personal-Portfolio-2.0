@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { projectTitle, summary, githubUrl, languages, url } = Astro.props as Props;
+console.log(url);
 
 let title = projectTitle.replaceAll('-', ' ').replaceAll('_', ' ');
 ---
@@ -55,7 +56,12 @@ let title = projectTitle.replaceAll('-', ' ').replaceAll('_', ' ');
                 url === '' ? (
                     ''
                 ) : (
-                    <a href={url} target='_blank' class='mt-3 text-black inline-flex items-center ml-3'>
+                    <a
+                        href={url}
+                        target='_blank'
+                        class='mt-3 inline-flex items-center ml-3 text-slate-700'
+                        target='_blank'
+                    >
                         Live
                         <svg
                             fill='none'
