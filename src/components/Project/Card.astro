@@ -7,16 +7,13 @@ export interface Props {
     url: string;
 }
 
-const { projectTitle, summary, githubUrl, languages, url } =
-    Astro.props as Props;
+const { projectTitle, summary, githubUrl, languages, url } = Astro.props as Props;
 
-let title = projectTitle.replaceAll("-", " ").replaceAll("_", " ");
+let title = projectTitle.replaceAll('-', ' ').replaceAll('_', ' ');
 ---
 
-<div class="container px-5 mx-auto">
-    <div
-        class="p-5 bg-white flex items-center mx-auto border-b mb-5 border-gray-200 rounded-lg sm:flex-row flex-col"
-    >
+<div class='container px-5 mx-auto'>
+    <div class='p-5 bg-white flex items-center mx-auto border-b mb-5 border-gray-200 rounded-lg sm:flex-row flex-col'>
         <!-- <div
             class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0"
         >
@@ -24,61 +21,52 @@ let title = projectTitle.replaceAll("-", " ").replaceAll("_", " ");
                 src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939"
             />
         </div> -->
-        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h1
-                class="text-black text-2xl title-font font-bold mb-2 capitalize"
-            >
+        <div class='flex-grow sm:text-left text-center mt-6 sm:mt-0'>
+            <h1 class='text-black text-2xl title-font font-bold mb-2 capitalize'>
                 {title}
             </h1>
-            <p class="leading-relaxed text-base text-gray-800">
+            <p class='leading-relaxed text-base text-gray-800'>
                 {summary}
             </p>
-            <div class="py-4">
+            <div class='py-4'>
                 {
                     languages.map((lang) => (
-                        <span class="m-2 justify-between items-center text-xs text-gray-800 sm:text-sm bg-gray-200 hover:bg-gray-300 rounded px-4 py-2 font-bold leading-loose">
+                        <span class='m-2 justify-between items-center text-xs text-gray-800 sm:text-sm bg-gray-200 hover:bg-gray-300 rounded px-4 py-2 font-bold leading-loose inline-block'>
                             {lang}
                         </span>
                     ))
                 }
             </div>
-            <a
-                href={githubUrl}
-                target="_blank"
-                class="mt-3 text-indigo-500 inline-flex items-center"
+            <a href={githubUrl} target='_blank' class='mt-3 text-indigo-500 inline-flex items-center'
                 >Github Code
                 <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    class='w-4 h-4 ml-2'
+                    viewBox='0 0 24 24'
                 >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    <path d='M5 12h14M12 5l7 7-7 7'></path>
                 </svg>
             </a>
             {
-                url === "" ? (
-                    ""
+                url === '' ? (
+                    ''
                 ) : (
-                    <a
-                        href={url}
-                        target="_blank"
-                        class="mt-3 text-black inline-flex items-center ml-3"
-                    >
+                    <a href={url} target='_blank' class='mt-3 text-black inline-flex items-center ml-3'>
                         Live
                         <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
+                            fill='none'
+                            stroke='currentColor'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'
+                            stroke-width='2'
+                            class='w-4 h-4 ml-2'
+                            viewBox='0 0 24 24'
                         >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
+                            <path d='M5 12h14M12 5l7 7-7 7' />
                         </svg>
                     </a>
                 )
