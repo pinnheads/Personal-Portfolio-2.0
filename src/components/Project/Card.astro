@@ -8,7 +8,6 @@ export interface Props {
 }
 
 const { projectTitle, summary, githubUrl, languages, url } = Astro.props as Props;
-console.log(url);
 
 let title = projectTitle.replaceAll('-', ' ').replaceAll('_', ' ');
 ---

@@ -1,5 +1,4 @@
 <script>
-    // import SvgIcon from './SvgIcon.svelte';
     import { aboutPageIcon, projectPageIcon, workPageIcon, contactPageIcon } from '../icons/iconData';
     import { onMount } from 'svelte';
 
