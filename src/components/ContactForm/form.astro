@@ -1,0 +1,54 @@
+<form data-netlify='true' netlify-honeypot='bot-field' name='contact' class='w-auto mx-8 my-7 md:my-12' method='POST'>
+    <p class='hidden'>
+        <label>
+            Don't fill this out if you're human: <input name='bot-field' />
+        </label>
+    </p>
+    <input type='hidden' name='form-name' value='contact' />
+    <div class='flex flex-col -mx-3 mb-6'>
+        <div class='w-full md:mb-0'>
+            <input
+                class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500'
+                id='grid-first-name'
+                type='text'
+                name='fName'
+                placeholder='First Name'
+            />
+        </div>
+        <div class='w-full'>
+            <input
+                class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-gray-500'
+                id='grid-last-name'
+                type='text'
+                name='lName'
+                placeholder='Last Name'
+            />
+        </div>
+    </div>
+    <div class='flex flex-wrap -mx-3 mb-3'>
+        <div class='w-full'>
+            <input
+                class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500'
+                id='email'
+                type='email'
+                name='emailId'
+                placeholder='Email'
+            />
+        </div>
+    </div>
+    <div class='flex flex-wrap -mx-3 mb-6'>
+        <div class='w-full'>
+            <textarea
+                class='no-resize appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500 h-20 3xl:h-48 resize-none'
+                id='message'
+                name='message'
+                placeholder='Your message goes here...'></textarea>
+        </div>
+    </div>
+    <button
+        class='shadow bg-[#10acc7] focus:shadow-outline focus:outline-none text-white font-bold py-3 px-4 rounded w-40'
+        type='submit'
+    >
+        Send
+    </button>
+</form>
