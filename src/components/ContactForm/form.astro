@@ -116,6 +116,7 @@ const bot_api_key = import.meta.env.BOT_ID;
             method: 'POST',
             headers: {
                 Accept: 'application/json',
+                'User-Agent': 'Telegram Bot SDK - (https://github.com/irazasyed/telegram-bot-sdk)',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
@@ -154,8 +155,6 @@ const bot_api_key = import.meta.env.BOT_ID;
                 element.style.display = 'none';
                 interval = 0;
             }
-            console.log(new_opacity);
-
             // Apply visual. Style attributes are strings.
             element.style.opacity = new_opacity;
         }, 1000 / 15);
