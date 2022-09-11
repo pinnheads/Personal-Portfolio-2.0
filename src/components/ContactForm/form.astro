@@ -1,36 +1,23 @@
 ---
+const chat_id = import.meta.env.CHAT_ID;
+const bot_api_key = import.meta.env.BOT_ID;
 ---
 
-<form netlify netlify-honeypot='bot-field' name='contact' class='w-auto mx-8 my-7 md:my-12' method='POST'>
-    <p class='hidden'>
-        <label>
-            Don't fill this out if you're human: <input name='bot-field' />
-        </label>
-    </p>
-    <input type='hidden' name='form-name' value='contact' />
-    <div class='flex flex-col -mx-3 mb-6'>
-        <div class='w-full md:mb-0'>
-            <input
-                class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500'
-                id='grid-first-name'
-                type='text'
-                name='fName'
-                placeholder='First Name'
-            />
-        </div>
-        <div class='w-full'>
-            <input
-                class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-gray-500'
-                id='grid-last-name'
-                type='text'
-                name='lName'
-                placeholder='Last Name'
-            />
-        </div>
+<form name='contact' class='w-auto mx-8 my-4 md:my-12' method='POST' id='contact-form'>
+    <div class='flex flex-wrap -mx-3 md:mb-0'>
+        <input
+            required
+            class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500'
+            id='grid-name'
+            type='text'
+            name='name'
+            placeholder='Name'
+        />
     </div>
     <div class='flex flex-wrap -mx-3 mb-3'>
         <div class='w-full'>
             <input
+                required
                 class='appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500'
                 id='email'
                 type='email'
@@ -42,17 +29,135 @@
     <div class='flex flex-wrap -mx-3 mb-6'>
         <div class='w-full'>
             <textarea
-                class='no-resize appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500 h-20 3xl:h-48 resize-none'
+                class='no-resize appearance-none block w-full bg-[#111418] border-b-2 border-[#10acc7] text-slate-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500 h-20 md:h-48 resize-none'
                 id='message'
                 name='message'
                 placeholder='Your message goes here...'></textarea>
         </div>
     </div>
     <button
-        class='shadow bg-[#10acc7] focus:shadow-outline focus:outline-none text-white font-bold py-3 px-4 rounded w-40'
+        class='shadow flex text-center align-middle justify-center items-center m-auto bg-[#10acc7] focus:shadow-outline focus:outline-none text-white font-bold py-3 px-4 rounded w-40'
+        id='submit-btn'
         name='submit'
         type='submit'
     >
-        Send
+        <svg
+            aria-hidden='true'
+            class='w-5 h-5 text-blue-600 dark:text-blue-500'
+            focusable='false'
+            data-prefix='fas'
+            data-icon='paper-plane'
+            role='img'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 512 512'
+            ><path
+                fill='white'
+                d='M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z'
+            ></path>
+        </svg>
+        <div class='pl-2 text-center align-middle'>Send</div>
     </button>
+    <div
+        id='toast-simple-success'
+        class='hidden absolute bottom-12 right-8 items-center p-4 space-x-4 w-full max-w-xs text-slate-200 bg-[#10acc7] rounded-lg divide-x divide-gray-200 shadow space-x font-semibold'
+        role='alert'
+    >
+        <svg
+            aria-hidden='true'
+            class='w-5 h-5 text-blue-600'
+            focusable='false'
+            data-prefix='fas'
+            data-icon='paper-plane'
+            role='img'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 512 512'
+            ><path
+                fill='white'
+                d='M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z'
+            ></path>
+        </svg>
+        <div class='pl-4 mx-auto'>Message sent successfully.</div>
+    </div>
+    <div
+        id='toast-simple-failure'
+        class='hidden absolute bottom-12 right-8 items-center p-4 space-x-4 w-full max-w-xs text-red-500 bg-white rounded-lg divide-x divide-slate-800 shadow space-x'
+        role='alert'
+    >
+        <svg aria-hidden='true' class='w-10 h-10' fill='red' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'
+            ><path
+                fill-rule='evenodd'
+                d='M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z'
+                clip-rule='evenodd'></path>
+        </svg>
+        <div class='pl-4'>Error in sending message! Please try again later</div>
+    </div>
 </form>
+
+<script define:vars={{ chat_id, bot_api_key }}>
+    const form = document.getElementById('contact-form');
+    const successNotification = document.getElementById('toast-simple-success');
+    const failureNotification = document.getElementById('toast-simple-failure');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('grid-name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        const telegram_message = `*Name: * ${name.value}\n*Email: * ${email.value}\n*Message: * ${message.value}`;
+
+        sendTelegramMessage(telegram_message);
+        form.reset();
+    });
+
+    const sendTelegramMessage = async (message_body) => {
+        const url = 'https://api.telegram.org/bot' + bot_api_key + '/sendMessage';
+        const options = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chat_id,
+                text: message_body,
+                parse_mode: 'Markdown',
+            }),
+        };
+
+        const response = await fetch(url, options)
+            .then((response) => {
+                successNotification.style.display = 'flex';
+                setTimeout(() => fadeTo(successNotification), 3000);
+                return response;
+            })
+            .catch((err) => {
+                failureNotification.style.display = 'flex';
+                setTimeout(() => fadeTo(failureNotification), 3000);
+                console.error(err);
+            });
+
+        return response;
+    };
+
+    function fadeTo(element) {
+        // Store our element's current opacity (or default to 1 if null)
+        var fromValue = 1;
+
+        let interval = setInterval(() => {
+            var new_opacity = fromValue - 0.1;
+            fromValue = new_opacity;
+
+            // If our ratio is >= 1, then we're done.. so stop processing
+            if (new_opacity < 0.1) {
+                clearInterval(interval);
+                element.style.display = 'none';
+                interval = 0;
+            }
+            console.log(new_opacity);
+
+            // Apply visual. Style attributes are strings.
+            element.style.opacity = new_opacity;
+        }, 1000 / 15);
+    }
+</script>
