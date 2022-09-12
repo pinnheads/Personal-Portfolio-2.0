@@ -10,9 +10,9 @@ const basics = await response.basics;
 ---
 
 <Layout title='About'>
-    <div class='container mx-auto gap-0 h-full grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto align-middle'>
-        <div class='grid grid-col-2 md:grid-cols-1 lg:grid-cols-2 m-auto justify-items-center align-middle md:w-full'>
-            <div class='m-auto align-middle'>
+    <div class='flex flex-col h-full lg:flex-row align-middle justify-center'>
+        <div class='flex flex-col lg:flex-row align-middle text-center justify-center md:w-full basis-1/2'>
+            <div class='m-auto mb-0 lg:mb-auto lg:mr-0 align-middle justify-end'>
                 <img
                     src='assets/profile-circle.png'
                     alt='Profile Photo'
@@ -21,24 +21,28 @@ const basics = await response.basics;
             </div>
             <Socials />
         </div>
-        <div class='m-auto text-center w-full'>
-            <h2 class='text-4xl md:text-6xl 3xl:text-7xl'>Hi 👋, I'm</h2>
-            <h1 class='text-5xl md:text-8xl 3xl:text-9xl name'>
-                {basics.name}
-            </h1>
-            <span class='text-2xl md:text-5xl 3xl:text-5xl'>a {basics.label}</span>
-            <div class='flex flex-column my-7 md:mt-12'>
+        <div class='flex flex-col text-center w-full basis-1/2 items-center'>
+            <div class='flex basis-3/5 justify-center items-center lg:items-end w-full'>
+                <span>
+                    <h2 class='text-4xl md:text-6xl 3xl:text-7xl'>Hi 👋, I'm</h2>
+                    <h1 class='text-6xl md:text-8xl 3xl:text-9xl name'>
+                        {basics.name}
+                    </h1>
+                    <span class='text-2xl md:text-5xl 3xl:text-5xl'>a {basics.label}</span>
+                </span>
+            </div>
+            <div class='flex flex-row basis-2/5 justify-center items-center lg:p-12 w-full'>
                 <a
                     rel='prefetch'
                     type='button'
                     href='https://registry.jsonresume.org/pinnheads'
-                    class='text-black text-center mx-4 text-lg rounded-xl md:text-2xl p-2 md:p-4 hover:bg-yellow-500 bg-[#f8ca12] basis-1/2 font-bold ml-4'
+                    class='text-black text-center mx-2 md:mx-4 text-lg rounded-xl md:text-2xl p-2 md:p-4 hover:bg-yellow-500 bg-[#f8ca12] font-bold w-2/3 min-h-1/3 lg:min-h-1/6 flex justify-center items-center'
                 >
                     Resume
                 </a>
                 <a
                     type='button'
-                    class='basis-1/2 text-blue-400 text-center text-lg md:text-2xl rounded-xl hover:bg-[#10acc7] hover:text-white tranisition ease-in-out delay-75 border border-blue-500 md:p-4 font-bold md:font-medium hover:font-bold pt-2 mr-4'
+                    class='text-blue-400 text-center text-lg md:text-2xl rounded-xl hover:bg-[#10acc7] hover:text-white tranisition ease-in-out delay-75 border border-blue-500 p-2 md:p-4 font-bold md:font-medium hover:font-bold pt-2 w-2/3 mx-2 md:mx-4 min-h-1/3 lg:min-h-1/6 flex justify-center items-center'
                     href='/contact'
                 >
                     Contact Me

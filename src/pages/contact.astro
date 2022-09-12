@@ -12,7 +12,9 @@ const properties = {
 
 <Layout title={properties.title}>
     <RotatingCard title={properties.title} color={properties.color}>
-        <div class='flex flex-col lg:flex-row divide-y-2 lg:divide-x-2 lg:divide-y-0 my-auto overflow-hidden'>
+        <div
+            class='flex flex-col-reverse lg:flex-row divide-y-2 divide-y-reverse lg:divide-x-2 lg:divide-y-0 my-auto overflow-hidden'
+        >
             <div class='w-auto basis-2/3 mx-auto'>
                 <div class='text-left mt-7 md:mt-12 mx-4 md:mx-8'>
                     <p class='3xl:text-xl font-semibold md:mb-4'>
