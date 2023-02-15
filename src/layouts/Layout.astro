@@ -14,29 +14,8 @@ const { title } = Astro.props as Props;
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
         <!-- Primary Meta Tags -->
-        <title>Utsav Deep</title>
+        <title>{title}</title>
         <meta name="title" content="Utsav Deep" />
         <meta
             name="description"
@@ -61,9 +40,28 @@ const { title } = Astro.props as Props;
             property="twitter:description"
             content="Hi there, I'm Utsav. My current focus is to excel in the field of Test Automation and to build products that help people in their day to day lives."
         />
-        <meta property="twitter:image" content="" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
     </head>
     <div class="z-20 flex flex-col h-screen">
         <section class="basis-1/12">
