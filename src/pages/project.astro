@@ -1,23 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import RotatingCard from '../layouts/RotatingCard.astro';
-import Card from '../components/Project/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import RotatingCard from "../layouts/RotatingCard.astro";
+import Card from "../components/Project/Card.astro";
 
-const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
+const gitConnectedUrl = "https://gitconnected.com/v1/portfolio/pinnheads";
 const response = await fetch(gitConnectedUrl)
     .then((data) => data.json())
     .catch((error) => console.log(error));
 
 const projects = response.projects;
 const properties = {
-    title: 'Projects',
-    color: '#f8ca12',
+    title: "Projects",
+    color: "#f8ca12",
 };
 ---
 
 <Layout title={properties.title}>
     <RotatingCard title={properties.title} color={properties.color}>
-        <span class='my-8'>
+        <span class="my-8">
             {
                 projects.map((project) => (
                     <Card
@@ -33,6 +33,4 @@ const properties = {
     </RotatingCard>
 </Layout>
 
-<style>
-
-</style>
+<style></style>

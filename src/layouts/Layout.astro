@@ -1,8 +1,8 @@
 ---
-import Navbar from '../components/navbar/navbar.svelte';
-import Footer from '../components/footer/footer.svelte';
-import '@fontsource/open-sans';
-import '@fontsource/league-spartan';
+import Navbar from "../components/navbar/navbar.svelte";
+import Footer from "../components/footer/footer.svelte";
+import "@fontsource/open-sans";
+import "@fontsource/league-spartan";
 
 export interface Props {
     title: string;
@@ -12,31 +12,72 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
     <head>
-        <meta charset='UTF-8' />
-        <meta name='viewport' content='width=device-width' />
-        <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-        <link rel='manifest' href='/site.webmanifest' />
-        <meta name='generator' content={Astro.generator} />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <!-- Primary Meta Tags -->
+        <title>Utsav Deep</title>
+        <meta name="title" content="Utsav Deep" />
+        <meta
+            name="description"
+            content="Hi there, I'm Utsav. My current focus is to excel in the field of Test Automation and to build products that help people in their day to day lives."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://utsavdeep.com/" />
+        <meta property="og:title" content="Utsav Deep" />
+        <meta
+            property="og:description"
+            content="Hi there, I'm Utsav. My current focus is to excel in the field of Test Automation and to build products that help people in their day to day lives."
+        />
+        <meta property="og:image" content="" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://utsavdeep.com/" />
+        <meta property="twitter:title" content="Utsav Deep" />
+        <meta
+            property="twitter:description"
+            content="Hi there, I'm Utsav. My current focus is to excel in the field of Test Automation and to build products that help people in their day to day lives."
+        />
+        <meta property="twitter:image" content="" />
+        <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <div class='z-20 flex flex-col h-screen'>
-        <section class='basis-1/12'>
+    <div class="z-20 flex flex-col h-screen">
+        <section class="basis-1/12">
             <Navbar client:load />
         </section>
         <div
-            class='flex justify-items-center align-middle text-center w-100 mt-5 rounded-3xl mx-2 wrapper z-10 basis-10/12 max-h-[75vh] md:max-h-full'
-            style='background-color: #111418;'
+            class="flex justify-items-center align-middle text-center w-100 mt-5 rounded-3xl mx-2 wrapper z-10 basis-10/12 max-h-[75vh] md:max-h-full shadow-xl shadow-gray-500"
+            style="background-color: #111418;"
         >
-            <div class='w-full'>
+            <div class="w-full">
                 <slot />
             </div>
         </div>
-        <section class='flex basis-1/12 items-start 3xl:items-center'>
+        <section class="flex basis-1/12 items-start 3xl:items-center">
             <Footer client:idle />
         </section>
     </div>
@@ -51,11 +92,11 @@ const { title } = Astro.props as Props;
         h4,
         h5,
         h6 {
-            font-family: 'League Spartan', sans-serif;
+            font-family: "League Spartan", sans-serif;
         }
 
         html {
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Open Sans", sans-serif;
             color: #cad2c5;
             background-color: var(--color-bg);
             overflow: hidden;
