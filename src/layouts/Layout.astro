@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/navbar/navbar.svelte";
 import Footer from "../components/footer/footer.svelte";
+import { ViewTransitions } from 'astro:transitions';
 import "@fontsource/open-sans";
 import "@fontsource/league-spartan";
 
@@ -12,10 +13,11 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" transition:animate="slide">
     <head>
         <!-- Primary Meta Tags -->
         <title>{title}</title>
+        <ViewTransitions />
         <meta name="title" content="Utsav Deep" />
         <meta
             name="description"
