@@ -4,6 +4,7 @@ const getData = async () => {
     const url = 'https://gitconnected.com/v1/portfolio/pinnheads';
     const data = EleventyFetch(url, {
         duration: '4w',
+        directory: 'dist/.cache',
         type: 'json',
     });
     return data;
