@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import RotatingCard from '../layouts/RotatingCard.astro';
+import data from '../scripts/fetchData';
 
 const properties = {
     title: 'Experience',
@@ -23,12 +24,7 @@ const monthNames = [
     'December',
 ];
 
-const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
-
-const workHistory = response.work;
+const workHistory = data.work;
 ---
 
 <Layout title={properties.title}>

@@ -1,12 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Socials from '../components/socials/socials.astro';
-const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
+import data from '../scripts/fetchData';
 
-const basics = await response.basics;
+const basics = await data.basics;
 ---
 
 <Layout title='Utsav Deep'>

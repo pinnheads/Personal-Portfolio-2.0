@@ -21,3 +21,5 @@ pnpm-debug.log*
 
 #SSR
 .netlify
+.tmp
+.cache

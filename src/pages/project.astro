@@ -2,13 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import RotatingCard from "../layouts/RotatingCard.astro";
 import Card from "../components/Project/Card.astro";
+import data from '../scripts/fetchData';
 
-const gitConnectedUrl = "https://gitconnected.com/v1/portfolio/pinnheads";
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
-
-const projects = response.projects;
+const projects = data.projects;
 const properties = {
     title: "Projects",
     color: "#f8ca12",
