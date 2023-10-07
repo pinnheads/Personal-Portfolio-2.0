@@ -2,14 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import RotatingCard from "../layouts/RotatingCard.astro";
 import Card from "../components/Project/Card.astro";
-import fetchData from '../scripts/fetchData';
 
-const response = await fetchData();
-const projects = response.projects;
 const properties = {
     title: "Projects",
     color: "#f8ca12",
 };
+
+const projectsData = Astro.locals;
+const projects = projectsData.data;
+
 ---
 
 <Layout title={properties.title}>

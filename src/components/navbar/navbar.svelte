@@ -43,7 +43,6 @@
 
     onMount(() => {
         url = window.location.href.replace(window.location.origin, '');
-        console.log(url);
     });
 </script>
 

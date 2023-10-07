@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Socials from '../components/socials/socials.astro';
-import fetchData from '../scripts/fetchData';
 
-const response = await fetchData();
-const basics = response.basics;
+const basicsData = Astro.locals;
+const basics = basicsData.data;
 ---
 
 <Layout title='Utsav Deep'>
