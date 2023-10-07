@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "netlify": "netlify dev",
     "astro": "astro"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "@astrojs/svelte": "^4.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.2.0",
+    "netlify-cli": "^16.5.1",
     "svelte": "^3.49.0"
   },
   "dependencies": {

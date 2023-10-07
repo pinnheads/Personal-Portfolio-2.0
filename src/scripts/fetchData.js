@@ -1,9 +1,11 @@
 import EleventyFetch from '@11ty/eleventy-fetch';
 
-const data = await EleventyFetch('https://gitconnected.com/v1/portfolio/pinnheads', {
-    duration: '4w',
-    directory: '.cache',
-    type: 'json',
-});
+export default async function fetchData() {
+    let url = 'https://gitconnected.com/v1/portfolio/pinnheads';
 
-export default data;
+    /* This returns a promise */
+    return EleventyFetch(url, {
+        duration: '4w', // save for 1 day
+        type: 'json', // we’ll parse JSON for you
+    });
+}
