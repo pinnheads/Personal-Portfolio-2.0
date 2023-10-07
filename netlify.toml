@@ -11,9 +11,3 @@
   port = 8888
   framework = "astro"
   publish = "dist"
-
-[[plugins]]
-package = "netlify-plugin-cache"
-
-  [plugins.inputs]
-  paths = [ "./tmp/.cache" ]

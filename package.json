@@ -22,7 +22,6 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@fontsource/league-spartan": "^4.5.11",
     "@fontsource/open-sans": "^4.5.11",
-    "nanostores": "^0.6.0",
-    "netlify-plugin-cache": "^1.0.3"
+    "nanostores": "^0.6.0"
   }
 }
