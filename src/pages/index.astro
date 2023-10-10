@@ -8,8 +8,8 @@ import { Image } from 'astro:assets';
 //     .then((data) => data.json())
 //     .catch((error) => console.log(error));
 const data = Astro.locals;
-// console.log(data)
-const basics = await data.profileData.basics;
+const responseData = await data.profileData;
+const basics = responseData.basics;
 ---
 
 <Layout title='About'>
