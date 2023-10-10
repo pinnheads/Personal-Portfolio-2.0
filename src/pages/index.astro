@@ -3,12 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Socials from '../components/socials/socials.astro';
 import profileImg from '../assets/profile-circle.webp';
 import { Image } from 'astro:assets';
-const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
-
-const basics = await response.basics;
+// const gitConnectedUrl = 'https://gitconnected.com/v1/portfolio/pinnheads';
+// const response = await fetch(gitConnectedUrl)
+//     .then((data) => data.json())
+//     .catch((error) => console.log(error));
+const data = Astro.locals;
+// console.log(data)
+const basics = await data.profileData.basics;
 ---
 
 <Layout title='About'>
