@@ -1,0 +1,28 @@
+name: Build and Upload LaTeX document
+on: 
+  push:
+    branches:
+        - 'resume'
+    paths:
+        - 'public/**.pdf'
+jobs:
+  create_and_merge:
+    runs-on: ubuntu-latest
+    steps:
+        -   name: Checkout code
+            uses: actions/checkout@v2
+        -   name: Create Pull Request
+            id: cpr
+            uses: peter-evans/create-pull-request@v5
+            with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                commit-message: Update resume
+                title: Update resume
+                body: Updates for resume
+                branch: pr/resume-update
+                delete-branch: true
+        -   name: Merge Pull Request
+            if: ${{ steps.cpr.outputs.pull-request-number }}
+            run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }}
+            env:
+                GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
