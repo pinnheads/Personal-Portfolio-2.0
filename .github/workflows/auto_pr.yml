@@ -11,16 +11,10 @@ jobs:
     steps:
         -   name: Checkout code
             uses: actions/checkout@v3
+        -   name: Verify PDF File
+            run: |
+                ls public/resume.pdf | grep -q 'PDF'
         -   name: Create Pull Request
-            id: cpr
-            uses: peter-evans/create-pull-request@v5
-            with:
-                token: ${{ secrets.GITHUB_TOKEN }}
-                title: Update resume
-                body: Updates for resume
-                delete-branch: true
-        -   name: Merge Pull Request
-            if: ${{ steps.cpr.outputs.pull-request-number }}
-            run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }}
+            run: gh pr create -B main -H resume --title '[GITHUB ACTION] Updated Resume' --body 'This PR was created automatically by Github Actions for updated resume file to be merged to main branch'
             env:
                 GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
