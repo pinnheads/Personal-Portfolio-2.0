@@ -16,10 +16,8 @@ jobs:
             uses: peter-evans/create-pull-request@v5
             with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                commit-message: Update resume
                 title: Update resume
                 body: Updates for resume
-                branch: pr/resume-update
                 delete-branch: true
         -   name: Merge Pull Request
             if: ${{ steps.cpr.outputs.pull-request-number }}
