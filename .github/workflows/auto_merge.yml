@@ -1,0 +1,21 @@
+name: merge PR
+on: 
+  pull_request:
+    types:
+        - opened
+    branches:
+        - 'main'
+    paths:
+        - 'public/**.pdf'
+jobs:
+    merge_pr:
+        if: contains(github.event.pull_request.labels.*.name, 'gh-resume')
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v3
+            -   name: Create Pull Request
+                run: gh pr merge $PR_NUMBER --merge
+                env:
+                    GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+                    PR_NUMBER: "${{ github.event.pull_request.number }}"
