@@ -1,4 +1,4 @@
-name: Build and Upload LaTeX document
+name: Create and merge PR
 on: 
   push:
     branches:
@@ -10,16 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         -   name: Checkout code
-            uses: actions/checkout@v2
+            uses: actions/checkout@v3
         -   name: Create Pull Request
             id: cpr
             uses: peter-evans/create-pull-request@v5
             with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                commit-message: Update resume
                 title: Update resume
                 body: Updates for resume
-                branch: pr/resume-update
                 delete-branch: true
         -   name: Merge Pull Request
             if: ${{ steps.cpr.outputs.pull-request-number }}
