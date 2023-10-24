@@ -10,6 +10,9 @@ jobs:
         timeout-minutes: 2
         if: github.actor == 'github-action[bot]'
         runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
+            contents: write
         steps:
             -   name: Checkout code
                 uses: actions/checkout@v3
