@@ -8,7 +8,7 @@ on:
 jobs:
     merge_pr:
         timeout-minutes: 2
-        if: github.actor == 'github-action[bot]'
+        if: contains(github.event.pull_request.labels.*.name, 'gh-resume')
         runs-on: ubuntu-latest
         permissions:
             pull-requests: write
