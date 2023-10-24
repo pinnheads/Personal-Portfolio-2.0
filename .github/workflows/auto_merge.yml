@@ -5,25 +5,24 @@ on:
         - opened
     branches:
         - 'main'
+    paths:
+        - 'public/resume.pdf'
 jobs:
     merge_pr:
         timeout-minutes: 2
         if: contains(github.event.pull_request.labels.*.name, 'gh-resume')
         runs-on: ubuntu-latest
-        permissions:
-            pull-requests: write
-            contents: write
         steps:
             -   name: Checkout code
                 uses: actions/checkout@v3
             -   name: Output PR number
                 run: |
-                    echo "$PR_NUMBER"
+                    echo "${{ github.event.number }}"
             -   name: Merge PR
                 run: gh pr merge $PR_NUMBER --merge
                 env:
                     GITHUB_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
-                    PR_NUMBER: "${{ github.event.pull_request.number }}"
+                    PR_NUMBER: "${{ github.event.number }}"
             -   name: Delete remote branch
                 run: |
                     git push origin --delete resume
