@@ -4,7 +4,7 @@ on:
     branches:
         - 'resume'
     paths:
-        - 'public/**.pdf'
+        - 'public/resume.pdf'
 jobs:
   create_pr:
     runs-on: ubuntu-latest
