@@ -5,12 +5,10 @@ on:
         - opened
     branches:
         - 'main'
-    paths:
-        - 'public/resume.pdf'
 jobs:
     merge_pr:
         timeout-minutes: 2
-        if: contains(github.event.pull_request.labels.*.name, 'gh-resume')
+        if: github.actor == 'github-action[bot]'
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout code
