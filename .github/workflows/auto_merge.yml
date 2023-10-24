@@ -16,11 +16,14 @@ jobs:
         steps:
             -   name: Checkout code
                 uses: actions/checkout@v3
+            -   name: Output PR number
+                run: |
+                    echo "$PR_NUMBER"
             -   name: Merge PR
                 run: gh pr merge $PR_NUMBER --merge
+                env:
+                    GITHUB_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
+                    PR_NUMBER: "${{ github.event.pull_request.number }}"
             -   name: Delete remote branch
                 run: |
                     git push origin --delete resume
-                env:
-                    GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-                    PR_NUMBER: "${{ github.event.pull_request.number }}"
