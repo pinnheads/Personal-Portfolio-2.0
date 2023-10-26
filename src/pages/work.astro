@@ -31,7 +31,7 @@ const response = await fetch(gitConnectedUrl)
 const workHistory = response.work;
 ---
 
-<Layout title={properties.title}>
+<Layout title={"Utsav Deep | " + properties.title}>
     <RotatingCard title={properties.title} color={properties.color}>
         <ol class='relative border-l border-gray-200 mx-8 my-12 text-left'>
             {
