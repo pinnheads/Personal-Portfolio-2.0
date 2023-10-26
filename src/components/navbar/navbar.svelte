@@ -121,6 +121,12 @@
         display: inline;
         border-radius: 20%;
     }
+    .icon:hover {
+        display: inline;
+        border-radius: 20%;
+        transition: background 100ms ease;
+        transition-delay: 50ms;
+    }
 
     .navbarIcon {
         display: inline-block;
@@ -130,5 +136,7 @@
     .navbarIcon:hover {
         background-color: #111418;
         border-radius: 50%;
+        transition: background 250ms ease;
+        transition-delay: 50ms;
     }
 </style>
