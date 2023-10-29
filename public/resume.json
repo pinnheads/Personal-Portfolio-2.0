@@ -1,0 +1,204 @@
+{
+    "basics": {
+        "name": "Utsav Deep",
+        "label": "Test Automation Specialist",
+        "image": "",
+        "email": "utsvadeep022@outlook.com",
+        "phone": "+91-8088013139",
+        "url": "https://utsavdeep.com",
+        "summary": "Test Associate with over 2.5 years of experience specializing in automation testing. Proficient in a variety of modern automation tools and programming languages including JAVA, Selenium, Cucumber, Appium, and other test automation tools. Demonstrated ability to design and improve test automation frameworks and drive efficient, reliable results. Committed to maintaining technical skills and up-to-date industry knowledge.",
+        "location": {
+            "address": "2712 Broadway St",
+            "postalCode": "560094",
+            "city": "Bengaluru",
+            "countryCode": "IN",
+            "region": "Karnataka"
+        },
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "utsavdeep01",
+                "url": "https://twitter.com/utsavdeep01"
+            },
+            {
+                "network": "Github",
+                "username": "pinnheads",
+                "url": "https://github.com/pinnheads"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "Utsav Deep",
+                "url": "https://www.linkedin.com/in/utsavdeep"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "IGS",
+            "position": "Test Associate",
+            "url": "https://igsindia.net",
+            "startDate": "2022-01-01",
+            "summary": "In the role of a Test Associate at IGS, I leveraged various testing frameworks such as SerenityBDD, Selenium, RestAssured, and Cucumber with Java to automate a significant number of end-to-end tests. I implemented NodeJS-based server routes to interact with CloudWatch Logs, enhancing backend functionality verification and component level test automation. I established a robust mobile device testing automation framework using Appium, significantly improving testing efficiency and effectiveness. Additionally, I played a pivotal role in the proof-of-concept for two online payment applications by executing API tests using TestNG and RestAssured.",
+            "highlights": [
+                "Utilized SerenityBDD, Selenium, RestAssured, Cucumber framework with Java to automate over 40 End-to-End tests along with integration and functional testing",
+                "Implemented NodeJS based server routes to interact with CloudWatch Logs to verify backend functionality and automate component level tests",
+                "Established a robust mobile device testing automation framework using Appium, contributing to the enhancement of testing efficiency and effectiveness.",
+                "Played a key role in the proof-of-concept for two online payment applications by creating and executing API tests using TestNG and RestAssured"
+            ]
+        },
+        {
+            "name": "IGS",
+            "position": "Trainee Consultant",
+            "url": "https://igsindia.net",
+            "startDate": "2021-07-01",
+            "endDate": "2021-07-01",
+            "summary": "As a key contributor in my previous role, I automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing regression test execution time. I set up a proof-of-concept CI pipeline with Jenkins and GitHub for automatic test execution and email alerts, enhancing observability. I trained manual testers on WebDriverIO and SerenityBDD, fostering a team-wide approach to test automation. Additionally, I collaborated with manual testers to conduct functional testing, create and run functional tests, and log defects using tools like Jira, Testrail, and Browserstack.",
+            "highlights": [
+                "Successfully automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing the time needed for regression test execution",
+                "Set up a proof-of-concept CI pipeline with Jenkins and GitHub for automatic test execution and email alerts for better observability.",
+                "Trained manual testers on WebDriverIO and SerenityBDD, promoting a team-wide approach to test automation.",
+                "Collaborated with manual testers for functional testing by creating and running functional tests and logging defects using Jira, Testrail, and Browserstack."
+            ]
+        },
+        {
+            "name": "Cushy",
+            "position": "Intern",
+            "url": "#",
+            "startDate": "2019-06-01",
+            "endDate": "2019-08-01",
+            "summary": "I collaborated with the marketing team to gather potential customer data from platforms like Google and Zomato, enhancing our customer outreach. I gained valuable insights into client and team management by shadowing the Marketing team leader, which included mastering the art of making effective cold calls. I conducted cold calls to pitch sales to potential customers, successfully onboarding them onto our app. Additionally, I undertook field visits to local businesses for onboarding and provided demos of our application, demonstrating its potential to aid their growth.",
+            "highlights": [
+                "Collaborated with the marketing team to gather potential customer data from platforms like Google and Zomato, enhancing our customer outreach.",
+                "Gained insights into client and team management by shadowing the Marketing team leader, which included learning the art of making effective cold calls.",
+                "Conducted cold calls to pitch sales to potential customers, successfully onboarding them onto our app.",
+                "Undertook field visits to local businesses for onboarding and provided demos of our application, demonstrating its potential to aid their growth."
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Organization",
+            "position": "Volunteer",
+            "url": "https://organization.com/",
+            "startDate": "2012-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Description…",
+            "highlights": [
+                "Awarded 'Volunteer of the Month'"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Presidency University",
+            "url": "https://presidencyuniversity.in/",
+            "area": "Computer Science and Engineering",
+            "studyType": "Bachelor of Technology",
+            "startDate": "2017-08-01",
+            "endDate": "2021-05-01",
+            "score": "7.42",
+            "courses": [
+                "Database Management System",
+                "Operating Systems",
+                "Computer Organization and Architecture",
+                "Data Structures and Algorithms",
+                "Compilers",
+                "Web Development"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Award",
+            "date": "2014-11-01",
+            "awarder": "Company",
+            "summary": "There is no spoon."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "url": "https://publication.com",
+            "summary": "Description…"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Languages",
+            "level": "Master",
+            "keywords": [
+                "Java",
+                "Javascript",
+                "Python",
+                "SQL"
+            ]
+        },
+        {
+            "name": "Tools",
+            "level": "Master",
+            "keywords": [
+                "Intellij Idea",
+                "Postman",
+                "Appium Studio",
+                "Docker"
+            ]
+        },
+        {
+            "name": "Frameworks",
+            "level": "Master",
+            "keywords": [
+                "Playwright",
+                "WebDriverIO",
+                "SerenityBDD",
+                "Appium",
+                "Selenium",
+                "RestAssured",
+                "Cucumber",
+                "NodeJS",
+                "AWS SDK"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": [
+                "Ferrets",
+                "Unicorns"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference…"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Personal-Portfolio-2.0",
+            "startDate": "",
+            "endDate": "",
+            "description": "My personal Portfolio website built with Astro, Tailwind and Netlify ",
+            "highlights": [
+            ],
+            "url": "https://github.com/pinnheads/Personal-Portfolio-2.0"
+        }
+    ]
+}
