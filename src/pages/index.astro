@@ -3,12 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Socials from '../components/socials/socials.astro';
 import profileImg from '../assets/profile-circle.webp';
 import { Image } from 'astro:assets';
-const gitConnectedUrl = 'https://gist.githubusercontent.com/pinnheads/82c30ef253c2e6e303655c6fbe41aecd/raw';
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
-
-const basics = await response.basics;
+import json from '../../public/resume.json';
+const basics = json.basics;
 ---
 
 <Layout title='Utsav Deep | About'>
