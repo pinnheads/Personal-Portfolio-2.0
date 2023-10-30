@@ -51,7 +51,7 @@
             "position": "Trainee Consultant",
             "url": "https://igsindia.net",
             "startDate": "2021-07-01",
-            "endDate": "2021-07-01",
+            "endDate": "2021-12-01",
             "summary": "As a key contributor in my previous role, I automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing regression test execution time. I set up a proof-of-concept CI pipeline with Jenkins and GitHub for automatic test execution and email alerts, enhancing observability. I trained manual testers on WebDriverIO and SerenityBDD, fostering a team-wide approach to test automation. Additionally, I collaborated with manual testers to conduct functional testing, create and run functional tests, and log defects using tools like Jira, Testrail, and Browserstack.",
             "highlights": [
                 "Successfully automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing the time needed for regression test execution",
