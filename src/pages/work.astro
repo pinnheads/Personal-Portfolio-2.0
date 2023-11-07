@@ -37,7 +37,11 @@ const date = (stringDate) => {
                             </a>
                         </h3>
                         <p class='mb-4 text-base 3xl:text-lg font-normal text-gray-200 text-justify'>{work.summary}</p>
-                        <a class='text-lg 3xl:text-xl text-white font-semibold underline' href="/resume.pdf">Check out my resume for more details</a>
+                        <ul class='ml-8 list-disc text-slate-400'>
+                            {work.highlights.map((highlight) => (
+                                <li class='text-base 3xl:text-xl'>{highlight}</li>
+                                ))}
+                        </ul>
                     </li>
                 ))
             }
