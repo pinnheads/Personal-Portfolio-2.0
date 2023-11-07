@@ -38,7 +38,7 @@
             "position": "Test Associate",
             "url": "https://igsindia.net",
             "startDate": "2022-01-01",
-            "summary": "In the role of a Test Associate at IGS, I leveraged various testing frameworks such as SerenityBDD, Selenium, RestAssured, and Cucumber with Java to automate a significant number of end-to-end tests. I implemented NodeJS-based server routes to interact with CloudWatch Logs, enhancing backend functionality verification and component level test automation. I established a robust mobile device testing automation framework using Appium, significantly improving testing efficiency and effectiveness. Additionally, I played a pivotal role in the proof-of-concept for two online payment applications by executing API tests using TestNG and RestAssured.",
+            "summary": "As a Test Associate at IGS, I automated end-to-end tests using frameworks like SerenityBDD, Selenium, and Cucumber. I used NodeJS for backend verification and component level test automation. I improved testing efficiency with a mobile device testing framework using Appium and executed API tests for two online payment apps' proof-of-concept.",
             "highlights": [
                 "Utilized SerenityBDD, Selenium, RestAssured, Cucumber framework with Java to automate over 40 End-to-End tests along with integration and functional testing",
                 "Implemented NodeJS based server routes to interact with CloudWatch Logs to verify backend functionality and automate component level tests",
@@ -52,7 +52,7 @@
             "url": "https://igsindia.net",
             "startDate": "2021-07-01",
             "endDate": "2021-12-01",
-            "summary": "As a key contributor in my previous role, I automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing regression test execution time. I set up a proof-of-concept CI pipeline with Jenkins and GitHub for automatic test execution and email alerts, enhancing observability. I trained manual testers on WebDriverIO and SerenityBDD, fostering a team-wide approach to test automation. Additionally, I collaborated with manual testers to conduct functional testing, create and run functional tests, and log defects using tools like Jira, Testrail, and Browserstack.",
+            "summary": "In my previous role, I automated 300+ regression tests using Selenium/WebDriver, reducing test time. I established a CI pipeline with Jenkins and GitHub for auto test execution and alerts. I trained testers on WebDriverIO and SerenityBDD for a team-wide automation approach. I also collaborated with testers for functional testing and defect logging using Jira, Testrail, and Browserstack.",
             "highlights": [
                 "Successfully automated over 300 regression tests using the Selenium/WebDriver framework, significantly reducing the time needed for regression test execution",
                 "Set up a proof-of-concept CI pipeline with Jenkins and GitHub for automatic test execution and email alerts for better observability.",
@@ -66,7 +66,7 @@
             "url": "#",
             "startDate": "2019-06-01",
             "endDate": "2019-08-01",
-            "summary": "I collaborated with the marketing team to gather potential customer data from platforms like Google and Zomato, enhancing our customer outreach. I gained valuable insights into client and team management by shadowing the Marketing team leader, which included mastering the art of making effective cold calls. I conducted cold calls to pitch sales to potential customers, successfully onboarding them onto our app. Additionally, I undertook field visits to local businesses for onboarding and provided demos of our application, demonstrating its potential to aid their growth.",
+            "summary": " I collaborated with the marketing team to gather customer data from Google and Zomato, enhancing outreach. I shadowed the Marketing team leader to gain insights into client and team management, including cold calling. I onboarded customers onto our app through cold calls and field visits to local businesses, where I demonstrated our application’s potential.",
             "highlights": [
                 "Collaborated with the marketing team to gather potential customer data from platforms like Google and Zomato, enhancing our customer outreach.",
                 "Gained insights into client and team management by shadowing the Marketing team leader, which included learning the art of making effective cold calls.",
