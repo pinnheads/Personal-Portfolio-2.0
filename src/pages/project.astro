@@ -2,13 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import RotatingCard from "../layouts/RotatingCard.astro";
 import Card from "../components/Project/Card.astro";
+import json from '../../public/resume.json';
 
 const gitConnectedUrl = "https://gitconnected.com/v1/portfolio/pinnheads";
 const response = await fetch(gitConnectedUrl)
     .then((data) => data.json())
     .catch((error) => console.log(error));
 
-const projects = response.projects;
+// const projects = response.projects;
+const projects = json.projects;
 const properties = {
     title: "Projects",
     color: "#f8ca12",
@@ -22,10 +24,10 @@ const properties = {
                 projects.map((project) => (
                     <Card
                         projectTitle={project.name}
-                        summary={project.summary}
-                        githubUrl={project.githubUrl}
-                        languages={project.languages}
-                        url={project.url}
+                        summary={project.description}
+                        githubUrl={project.url}
+                        languages={project.highlights}
+                        url={""}
                     />
                 ))
             }
