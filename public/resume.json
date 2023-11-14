@@ -195,10 +195,32 @@
             "name": "Personal-Portfolio-2.0",
             "startDate": "",
             "endDate": "",
-            "description": "My personal Portfolio website built with Astro, Tailwind and Netlify ",
+            "description": "My personal portfolio website is a sophisticated platform built with Astro and Tailwind, and hosted on Netlify. It features seamless integration with other repositories for automatic resume updates, providing a dynamic showcase of my professional journey.",
             "highlights": [
+                "AstroJS",
+                "Svelte",
+                "Javascript",
+                "Tailwind",
+                "HTML",
+                "SSR",
+                "Netlify",
+                "Github Actions"
             ],
-            "url": "https://github.com/pinnheads/Personal-Portfolio-2.0"
+            "url": "https://github.com/pinnheads/Personal-Portfolio-2.0",
+            "live": "https://utsavdeep.com"
+        },
+        {
+            "name": "latex-resume",
+            "startDate": "",
+            "endDate": "",
+            "description": "My resume written in LaTeX, accompanied by a JSON file that facilitates seamless data updates on my portfolio website.",
+            "highlights": [
+                "LaTeX",
+                "JSON",
+                "Github Actions"
+            ],
+            "url": "https://github.com/pinnheads/Personal-Portfolio-2.0",
+            "live": "https://utsavdeep.com/resume.pdf"
         }
     ]
 }
