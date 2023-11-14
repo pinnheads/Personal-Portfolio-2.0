@@ -53,7 +53,7 @@
             {#each pages as page, index}
                 <td>
                     {#if page.href === url}
-                        <a href={page.href} class="navbarIcon active">
+                        <a href={page.href} class="navbarIcon active" title={page.name}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="40"
@@ -70,6 +70,7 @@
                             on:mouseenter={() => swapColor(index)}
                             on:mouseleave={() => swapColor(index)}
                             class="navbarIcon"
+                            title={page.name}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

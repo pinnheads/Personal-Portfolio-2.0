@@ -4,12 +4,6 @@ import RotatingCard from "../layouts/RotatingCard.astro";
 import Card from "../components/Project/Card.astro";
 import json from '../../public/resume.json';
 
-const gitConnectedUrl = "https://gitconnected.com/v1/portfolio/pinnheads";
-const response = await fetch(gitConnectedUrl)
-    .then((data) => data.json())
-    .catch((error) => console.log(error));
-
-// const projects = response.projects;
 const projects = json.projects;
 const properties = {
     title: "Projects",
@@ -27,7 +21,7 @@ const properties = {
                         summary={project.description}
                         githubUrl={project.url}
                         languages={project.highlights}
-                        url={""}
+                        url={project.live}
                     />
                 ))
             }
