@@ -27,72 +27,60 @@
 <figure>
   <img src="src/assets/profile-circle.webp" width=200 alt="repo-template in action">
   <br/>
-  <figcaption>repo-template in action</figcaption>
 </figure>
 
 </div>
 
-repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
+Personal-Portfolio-2.0 is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
 
 ## ✨ Features
 
--   Supports foo
--   Can do bar
--   Works with bazz
+-   Uses a JSON file to present data on the frontend
+-   Implements SSR with Astro
+-   [latex-resume](https://github.com/pinnheads/latex-resume) repo updates the resume file automatically with Github Actions
 
 ## Setup
 
 ### ⚡ Requirements
 
--   foo >= bar
--   bazz
+-   Node 18.0 or greater
 
 ### 🚀 Installation
 
 ```bash
-git clone https://github.com/pinnheads/repo-template
-cd repo-template
-<install_command>
+git clone https://github.com/pinnheads/Personal-Portfolio-2.0
+cd Personal-Portfolio-2.0
+npm install
 ```
 
 ### 💻 Usage
 
 ```bash
-USAGE:
-    repo-template [FLAGS] [OPTIONS]
-Example:
-    repo-template
+npm run dev
 ```
 
 ## What's Next
 
-Planning to add `<feature/module>`.
+Planning to add a Skills Sections and a few more projects.
 
 ### ✅ To-Do
 
--   [x] Setup repo
--   [ ] Think real hard
--   [ ] Start typing
+-   [ ] Add Tests w/ Playwright
+-   [ ] Add skills section
+-   [ ] Add more projects
 
 ## Behind The Code
 
-### 🌈 Inspiration
-
-repo-template was inspired by [bare-minimum by @2KAbhishek](https://github.com/2KAbhishek/bare-minimum).
-
-### 💡 Challenges/Learnings
-
--   The main challenges were `<issue/difficulty>`
--   I learned about `<learning/accomplishment>`
-
 ### 🧰 Tooling
 
--   [dots2k](https://github.com/pinnheads/dots2k) — Dev Environment
-
+-   [Astro](https://astro.build/)
+-   [Netlify](https://www.netlify.com)
+-   [Tailwind](https://tailwindcss.com/)
+-   [Svelte](https://svelte.dev/)
 
 ### 🔍 More Info
 
--   [similar](https://github.com/2KAbhishek/bare-minimum) — a related repo
+-   [latex-resume](https://github.com/pinnheads/latex-resume) — a related repo
 
 <hr>
 
