@@ -22,7 +22,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3a9fefb5-3f63-4b3c-a7c8-38dc51bcbe8f/deploy-status)](https://app.netlify.com/sites/gentle-kheer-7c012a/deploys)
 
-<h3>Portfolio website built w/ Astro for myself 🎇🎉</h3>
+<h3>Portfolio website built w/ Astro, Tailwind and Svelte 🎇🎉</h3>
 
 <figure>
   <img src="src/assets/profile-circle.webp" width=200 alt="repo-template in action">
@@ -30,8 +30,6 @@
 </figure>
 
 </div>
-
-Personal-Portfolio-2.0 is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
 
 ## ✨ Features
 
