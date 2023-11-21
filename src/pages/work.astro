@@ -21,7 +21,7 @@ const date = (stringDate) => {
 ---
 
 <Layout title={"Utsav Deep | " + properties.title}>
-    <RotatingCard title={properties.title} color={properties.color}>
+    <RotatingCard title={properties.title} color={properties.color} slot="default" btnText="" id="">
         <ol class='relative border-l border-gray-200 mx-8 my-12 text-left animate-fade-left'>
             {
                 workHistory.map((work) => (
@@ -36,10 +36,10 @@ const date = (stringDate) => {
                                 {work.name}
                             </a>
                         </h3>
-                        <p class='mb-4 text-base 3xl:text-lg font-normal text-gray-200 text-justify animate-fade-left animate-delay-250'>{work.summary}</p>
+                        <p class='mb-4 text-base xl:text-lg font-normal text-gray-200 text-justify animate-fade-left animate-delay-250'>{work.summary}</p>
                         <ul class='ml-8 list-disc text-slate-400'>
                             {work.highlights.map((highlight) => (
-                                <li class='text-base 3xl:text-xl animate-fade-left animate-delay-350'>{highlight}</li>
+                                <li class='text-base xl:text-xl animate-fade-left animate-delay-350'>{highlight}</li>
                                 ))}
                         </ul>
                     </li>

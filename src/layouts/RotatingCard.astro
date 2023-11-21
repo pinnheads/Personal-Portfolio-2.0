@@ -2,24 +2,47 @@
 export interface Props {
     title: string;
     color: string;
+    slot: string;
+    btnText: string;
+    id: string;
 }
 
-const { title, color } = Astro.props as Props;
+const { title, color, slot, btnText, id } = Astro.props as Props;
 const textColor = color;
 ---
 
 <div
-    class="flex flex-column flex-wrap md:flex-row w-full md:h-full overflow-hidden"
+    class="flex flex-column flex-wrap md:flex-row w-full md:h-full overflow-hidden relative"
 >
-    <div
-        class="border-r-2 md:ml-4 xl:pr-3 h-full rounded-lg text-2xl text-bold xl:text-5xl textbox uppercase justify-center tracking-wide items-center sm:fixed md:sticky z-20"
-    >
-        {title}
-    </div>
+    {title === '' ? ('') : (
+        <div
+            class="border-r-2 md:ml-4 xl:pr-3 h-full rounded-lg text-2xl text-bold xl:text-5xl textbox uppercase justify-center tracking-wide items-center bg-scroll md:sticky z-20"
+        >
+            {title}
+        </div>
+    )}
     <div
         class="flex-grow flex flex-col basis-11/12 overflow-y-scroll no-scrollbar h-full z-10"
     >
-        <slot />
+        <slot slot={slot} />
+        {btnText === '' ? (''): (
+            <button onclick="rotateCard()" class="justify-end md:my-4 md:text-2xl absolute left-0 bottom-0 w-full button bg-[#111418] inline-flex justify-center align-middle" id={id}>
+                {btnText}
+                <svg
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    class='w-8 h-8 ml-2'
+                    id={id+'-arrow'}
+                    viewBox='0 0 24 24'
+                >
+                    <path d='M5 12h14M12 5l7 7-7 7'></path>
+                </svg>
+            </button>
+        )}
+        
     </div>
 </div>
 
