@@ -5,6 +5,7 @@ import Card from "../components/Project/Card.astro";
 import json from '../../public/resume.json';
 
 const projects = json.projects;
+const skills = json.skills;
 const properties = {
     title: "Projects",
     color: "#f8ca12",
@@ -12,16 +13,32 @@ const properties = {
 ---
 
 <Layout title={"Utsav Deep | " + properties.title}>
-    <RotatingCard title={properties.title} color={properties.color}>
+    <RotatingCard title={properties.title} color={properties.color} slot="default" btnText="Skills" id="button-back">
         <span class="my-8">
             {
                 projects.map((project) => (
                     <Card
                         projectTitle={project.name}
                         summary={project.description}
-                        githubUrl={project.url}
                         languages={project.highlights}
+                        githubUrl={project.url}
                         url={project.live}
+                    />
+                ))
+            }
+        </span>
+        
+    </RotatingCard>
+    <RotatingCard title="Skills" color={properties.color} slot="rotating-card" btnText="Projects" id="button-front">
+        <span class="my-8">
+            {
+                skills.map((skill) => (
+                    <Card
+                        projectTitle={skill.name}
+                        summary={skill.level}
+                        languages={skill.keywords}
+                        githubUrl=""
+                        url=""
                     />
                 ))
             }
