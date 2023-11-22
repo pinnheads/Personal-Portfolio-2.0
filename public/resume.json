@@ -66,7 +66,7 @@
             "url": "#",
             "startDate": "2019-06-01",
             "endDate": "2019-08-01",
-            "summary": " I collaborated with the marketing team to gather customer data from Google and Zomato, enhancing outreach. I shadowed the Marketing team leader to gain insights into client and team management, including cold calling. I onboarded customers onto our app through cold calls and field visits to local businesses, where I demonstrated our application’s potential.",
+            "summary": " I collaborated with the marketing team to gather customer data from Google and Zomato, enhancing outreach. I shadowed the Marketing team leader to gain insights into client and team management, including cold calling. I onboarded customers onto our app through cold calls and field visits to local businesses, where I demonstrated our application's potential.",
             "highlights": [
                 "Collaborated with the marketing team to gather potential customer data from platforms like Google and Zomato, enhancing our customer outreach.",
                 "Gained insights into client and team management by shadowing the Marketing team leader, which included learning the art of making effective cold calls.",
@@ -135,27 +135,29 @@
     "skills": [
         {
             "name": "Languages",
-            "level": "Master",
+            "level": "",
             "keywords": [
                 "Java",
                 "Javascript",
-                "Python",
-                "SQL"
+                "Python"
             ]
         },
         {
             "name": "Tools",
-            "level": "Master",
+            "level": "",
             "keywords": [
                 "Intellij Idea",
+                "Eclipse",
                 "Postman",
                 "Appium Studio",
-                "Docker"
+                "Docker",
+                "Visual Studio Code",
+                "Linux"
             ]
         },
         {
             "name": "Frameworks",
-            "level": "Master",
+            "level": "",
             "keywords": [
                 "Playwright",
                 "WebDriverIO",
