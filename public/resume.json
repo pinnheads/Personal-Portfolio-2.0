@@ -6,7 +6,7 @@
         "email": "utsvadeep022@outlook.com",
         "phone": "+91-8088013139",
         "url": "https://utsavdeep.com",
-        "summary": "Test Associate with over 2.5 years of experience specializing in automation testing. Proficient in a variety of modern automation tools and programming languages including JAVA, Selenium, Cucumber, Appium, and other test automation tools. Demonstrated ability to design and improve test automation frameworks and drive efficient, reliable results. Committed to maintaining technical skills and up-to-date industry knowledge.",
+        "summary": "Test Engineer with over 2.5 years of experience specializing in automation testing. Proficient in a variety of modern automation tools and programming languages including JAVA, Selenium, Cucumber, Appium, and other test automation tools. Demonstrated ability to design and improve test automation frameworks and drive efficient, reliable results. Committed to maintaining technical skills and up-to-date industry knowledge.",
         "location": {
             "address": "2712 Broadway St",
             "postalCode": "560094",
@@ -35,11 +35,12 @@
     "work": [
         {
             "name": "IGS",
-            "position": "Test Associate",
+            "position": "Test Engineer",
             "url": "https://igsindia.net",
             "startDate": "2022-01-01",
-            "summary": "As a Test Associate at IGS, I automated end-to-end tests using frameworks like SerenityBDD, Selenium, and Cucumber. I used NodeJS for backend verification and component level test automation. I improved testing efficiency with a mobile device testing framework using Appium and executed API tests for two online payment apps' proof-of-concept.",
+            "summary": "As a Test Engineer at IGS, I automated end-to-end tests using frameworks like SerenityBDD, Selenium, and Cucumber. I used NodeJS for backend verification and component level test automation. I improved testing efficiency with a mobile device testing framework using Appium and executed API tests for two online payment apps' proof-of-concept.",
             "highlights": [
+                "Promoted from Test Associate (1 year and 11 months) to Test Engineer due to demonstrated technical proficiency, alignment with company visions, and commitment to quality assurance",
                 "Utilized SerenityBDD, Selenium, RestAssured, Cucumber framework with Java to automate over 40 End-to-End tests along with integration and functional testing",
                 "Implemented NodeJS based server routes to interact with CloudWatch Logs to verify backend functionality and automate component level tests",
                 "Established a robust mobile device testing automation framework using Appium, contributing to the enhancement of testing efficiency and effectiveness.",
