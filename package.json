@@ -10,13 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^3.0.2",
-    "@astrojs/prefetch": "^0.4.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/svelte": "^4.0.2",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.2.0",
-    "svelte": "^3.49.0"
+    "@astrojs/netlify": "^4.0.1",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/svelte": "^5.0.2",
+    "@astrojs/tailwind": "^5.0.4",
+    "astro": "^4.0.7"
   },
   "dependencies": {
     "@fontsource/league-spartan": "^4.5.11",
