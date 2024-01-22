@@ -32,12 +32,12 @@ const basics = json.basics;
                     <h4 class='text-xl md:text-3xl 3xl:text-5xl'>located in {basics.location.city}, {basics.location.region}, {basics.location.countryCode}</h4>
                    
                 </div>
-                <div class="back hidden absolute text-sm md:text-xl 2xl:text-2xl px-2 md:px-8 lg:w-4/5">
+                <div class="back hidden absolute text-sm md:text-xl 2xl:text-2xl px-1 md:px-8 lg:w-4/5">
                     {basics.summary}
                 </div>
             </div>
-            <button onclick="flipCard()" class="underline underline-offset-8 md:my-4 md:text-xl button-front">Read more about me > </button>
-            <button onclick="flipCard()" class="underline underline-offset-8 md:my-4 md:text-xl button-back hidden">Back ></button>
+            <button onclick="flipCard()" class="underline underline-offset-8 md:my-4 button-front">Read more about me > </button>
+            <button onclick="flipCard()" class="underline underline-offset-8 md:my-4 button-back hidden">Back ></button>
             <div class='flex flex-row basis-[25%] md:basis-[40%] justify-center items-center lg:justify-start lg:items-start lg:p-8 w-full h-full'>
                 <a
                     rel='prefetch'
