@@ -1,7 +1,7 @@
 import {
   defineConfig
 } from 'astro/config';
-import netlify from '@astrojs/netlify/functions';
+import netlify from '@astrojs/netlify';
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
@@ -10,6 +10,9 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  devToolbar: {
+    enabled: true,
+  },
   site: 'https://utsavdeep.com/',
   integrations: [svelte(), tailwind(), prefetch({
     selector: "a[href^='/']",
